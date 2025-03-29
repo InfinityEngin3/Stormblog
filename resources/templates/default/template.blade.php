@@ -34,15 +34,17 @@
         </div>
         <header class="bg-neutral-900 h-24 flex items-center justify-center border-b border-neutral-800">
             <div class="w-5xl flex justify-between items-center">
-                <div class="logotype flex items-center gap-3 -mt-1">
-                    <div class="logotype-icon text-xl text-neutral-400">
-                        <i class="ti ti-code"></i>
+                <a href="{{ url('') }}" class="hover:brightness-110 opacity-80 hover:opacity-100 transition-all duration-500 ease-in-out">
+                    <div class="logotype flex items-center gap-3 -mt-1">
+                        <div class="logotype-icon text-xl text-neutral-400">
+                            <i class="ti ti-code"></i>
+                        </div>
+                        <div class="logotype-text uppercase">
+                            <h1 class="font-semibold text-2xl text-neutral-100">Storm<span class="text-cyan-500">blog</span></h1>
+                            <h2 class="font-light text-neutral-500 text-xs">Blog de tecnología</h2>
+                        </div>
                     </div>
-                    <div class="logotype-text uppercase">
-                        <h1 class="font-semibold text-2xl text-neutral-100">Storm<span class="text-cyan-400">blog</span></h1>
-                        <h2 class="font-light text-neutral-500 text-xs">Blog de tecnología</h2>
-                    </div>
-                </div>
+                </a>
                 <div class="navbar flex items-center">
                     <nav>
                         <ul class="flex text-neutral-500 text-[10px] gap-2">
@@ -64,99 +66,9 @@
             </div>
         </header>
 
-        <main class="flex justify-center pt-6">
-            <div class="w-5xl">
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="col-span-2">
-                        <section class="blog-articles flex-col flex gap-4">
-                            <article class="bg-neutral-300/30 border-neutral-800/5 border rounded-sm grid grid-cols-4">
-                                <div>
-                                    <img src="{{ url('image/file/thumbnail.webp') }}" alt="" class="w-full h-full object-cover rounded-l-sm" />
-                                </div>
-                                <div class="col-span-3 flex flex-col justify-between pt-4 px-4 pb-2">
-                                    <div>
-                                        <h1 class="text-neutral-700 font-medium text-sm">[CURSO] Laravel 11 - Como crear un blog</h1>
-                                        <p class="text-neutral-600 text-[13px] pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a dui sodales nisi interdum tempor. Suspendisse pretium quam ipsum, at egestas ante ornare sit amet. Maecenas vitae sem id enim mollis volutpat nec nec nulla. Sed commodo ornare mauris nec bibendum.</p>
-                                    </div>
-                                    <div class="flex justify-between items-center pt-4">
-                                        <p class="uppercase font-medium text-neutral-500 text-[10px]"><i class="ti ti-calendar"></i> 29 de Marzo 2025</p>
-                                        <p class="text-neutral-600 text-xs">Novedades</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="bg-neutral-300/30 border-neutral-800/5 border rounded-sm grid grid-cols-4">
-                                <div>
-                                    <img src="{{ url('image/file/thumbnail.webp') }}" alt="" class="w-full h-full object-cover rounded-l-sm" />
-                                </div>
-                                <div class="col-span-3 flex flex-col justify-between pt-4 px-4 pb-2">
-                                    <div>
-                                        <h1 class="text-neutral-700 font-medium text-sm">[CURSO] Laravel 11 - Como crear un blog</h1>
-                                        <p class="text-neutral-600 text-[13px] pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a dui sodales nisi interdum tempor. Suspendisse pretium quam ipsum, at egestas ante ornare sit amet. Maecenas vitae sem id enim mollis volutpat nec nec nulla. Sed commodo ornare mauris nec bibendum.</p>
-                                    </div>
-                                    <div class="flex justify-between items-center pt-4">
-                                        <p class="uppercase font-medium text-neutral-500 text-[10px]"><i class="ti ti-calendar"></i> 29 de Marzo 2025</p>
-                                        <p class="text-neutral-600 text-xs">Novedades</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="bg-neutral-300/30 border-neutral-800/5 border rounded-sm grid grid-cols-4">
-                                <div>
-                                    <img src="{{ url('image/file/thumbnail.webp') }}" alt="" class="w-full h-full object-cover rounded-l-sm" />
-                                </div>
-                                <div class="col-span-3 flex flex-col justify-between pt-4 px-4 pb-2">
-                                    <div>
-                                        <h1 class="text-neutral-700 font-medium text-sm">[CURSO] Laravel 11 - Como crear un blog</h1>
-                                        <p class="text-neutral-600 text-[13px] pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a dui sodales nisi interdum tempor. Suspendisse pretium quam ipsum, at egestas ante ornare sit amet. Maecenas vitae sem id enim mollis volutpat nec nec nulla. Sed commodo ornare mauris nec bibendum.</p>
-                                    </div>
-                                    <div class="flex justify-between items-center pt-4">
-                                        <p class="uppercase font-medium text-neutral-500 text-[10px]"><i class="ti ti-calendar"></i> 29 de Marzo 2025</p>
-                                        <p class="text-neutral-600 text-xs">Novedades</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </section>
-                    </div>
-                    <div class="sidebar">
-                        <section class="module">
-                            <div class="module-title bg-neutral-300/30 border-neutral-800/5 border rounded-t-sm p-3 font-medium text-neutral-500 text-xs uppercase">
-                                <h1>Categorias</h1>
-                            </div>
-                            <div class="module-content">
-                                <nav>
-                                    <ul>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Noticias de Tecnología</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Lenguajes de Programación</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Desarrollo Web</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Desarrollo de Apps Móviles</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Inteligencia Artificial</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Ciberseguridad</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Desarrollo de Videojuegos</li>
-                                        </a>
-                                        <a href="">
-                                            <li class="bg-neutral-300/10 border-neutral-800/5 border border-t-0 p-3 font-medium text-neutral-500 text-xs">Hardware y Gadgets</li>
-                                        </a>
+        @include('pages::page')
 
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </main>
+        
     </div>
 
     <footer class="bg-neutral-900 h-12 flex justify-center items-center">

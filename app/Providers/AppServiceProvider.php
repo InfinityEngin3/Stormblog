@@ -21,7 +21,9 @@ class AppServiceProvider extends ServiceProvider
 
         # Setting up custom views folder
         View::AddNamespace('template', resource_path('templates/'.Config::get('app.template')));
-    
+        View::AddNamespace('pages', resource_path('templates/'.Config::get('app.template').'/pages'));
+        View::AddNamespace('modules', resource_path('templates/'.Config::get('app.template').'/pages/modules'));
+
         # Template library class
         $this->app->singleton(Template::class, function ($app){
             return new Template();
