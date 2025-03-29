@@ -1,8 +1,8 @@
-<div class="grid grid-cols-3 gap-4">
+<div class="grid grid-cols-3 gap-2">
     <div class="col-span-2">
-        <section class="blog-articles flex-col flex gap-4">
+        <section class="blog-articles flex-col flex gap-2">
 
-            @foreach($articles as $data)
+            @forelse($articles as $data)
             <article class="bg-neutral-300/30 border-neutral-800/5 border rounded-sm grid grid-cols-4">
                 <div>
                     <a href="{{ url('blog/article/'.$data->article_slug.'') }}">
@@ -24,7 +24,18 @@
                     </div>
                 </div>
             </article>
-            @endforeach
+            @empty
+                <div class="bg-yellow-200/80 rounded-sm flex gap-2 px-4 py-3 text-sm border border-yellow-400 text-yellow-700 items-center">
+                    <p class="icon text-lg"><i class="ti ti-alert-triangle"></i></p>
+                    <p class="text">No hay ningún artículo en la categoría seleccionada, selecciona otra categoría.</p>
+                </div>
+            @endforelse
+
+            <div>
+                {{ $articles->links() }}
+            </div>
+            
+
 
         </section>
     </div>

@@ -68,7 +68,6 @@
 
         @include('pages::page')
 
-        
     </div>
 
     <footer class="bg-neutral-900 h-12 flex justify-center items-center">

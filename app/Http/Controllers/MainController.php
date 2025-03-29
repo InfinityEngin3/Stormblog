@@ -28,7 +28,7 @@ class MainController extends Controller{
 
         # Query's Template
         $data['categories'] = Blog_categories::orderBy('id', 'ASC')->get();
-        $data['articles'] = Blog_articles::with('cat')->orderBy('id', 'desc')->paginate(10);
+        $data['articles'] = Blog_articles::with('cat')->orderBy('id', 'desc')->paginate(1);
 
         # Page Modules
         $data['page_module'] = array(

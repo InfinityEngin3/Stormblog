@@ -2,11 +2,6 @@
 # STYLE TEMPLATE
 --------------------------------------------------------------*/
 
-#template{
+body{
     font-family: "Onest", sans-serif;
-    display:grid;
-    grid-template-areas:
-        "aside main main";
-    grid-template-columns: 230px 1fr;
-    grid-template-rows: 1fr auto;
 }

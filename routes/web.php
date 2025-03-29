@@ -3,6 +3,9 @@
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\DataController;
 
+# Pages Controller
+use App\Http\Controllers\Pages\BlogController;
+
 use Illuminate\Support\Facades\Route;
 
 # Data controllers
@@ -12,3 +15,7 @@ Route::get('/image/file/{filename}', [DataController::class, 'files_images'])->w
 
 # Default Controller
 Route::get('/', [MainController::class, 'index']);
+
+# Blog Controller
+Route::get('/blog', [BlogController::class, 'blog_articles']);
+Route::get('/blog/{type}/{slug}', [BlogController::class, 'blog_articles']);
