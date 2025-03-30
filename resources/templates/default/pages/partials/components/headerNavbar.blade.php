@@ -77,7 +77,11 @@
                 
                 <!-- Dropdown Menu -->
                 <ul x-show="open" x-transition class="absolute mt-1 min-w-[150px] bg-neutral-200 border border-neutral-400 text-neutral-500 rounded shadow-lg">
-                    <li><a href="{{ url('logout') }}" class="block text-xs px-4 py-2 hover:bg-neutral-100"><i class="ti ti-logout pr-1"></i> Cerrar sesión</a></li>
+                    <li>
+                        <a href="{{ url('logout') }}" @click.stop class="block text-xs px-4 py-3 hover:bg-neutral-100">
+                            <i class="ti ti-logout pr-1"></i> Cerrar sesión
+                        </a>
+                    </li>
                 </ul>
             </div>
 
