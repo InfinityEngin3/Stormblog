@@ -6,6 +6,10 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+# Seeders
+use Database\Seeders\BlogSeeder;
+use Database\Seeders\MemberSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,9 +19,10 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            MemberSeeder::class,
+            BlogSeeder::class
         ]);
+
     }
 }
